@@ -1,4 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
+const isProd = process.env.NODE_ENV === 'production'
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
@@ -6,6 +7,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const baseUrl = '';
 
 module.exports = withBundleAnalyzer({
+  assetPrefix: isProd ? '/your-github-repo-name/' : '',
   poweredByHeader: false,
   trailingSlash: true,
   basePath: baseUrl,
