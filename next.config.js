@@ -4,7 +4,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 module.exports = withBundleAnalyzer({
-  assetPrefix: '/kadajett.github.io',
+  assetPrefix: '/kadajett.github.io/',
   poweredByHeader: false,
   trailingSlash: true,
   // basePath: baseUrl,
